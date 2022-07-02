@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html lang="en">  
+<head>
+    <meta charset="UTF-8"> 
+    <title>Document</title>  
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body> 
+    <input id="input1"> </input>
+    <input id="input2"> </input>
+    <input id="input3"> </input>
+    <input id="input4"> </input>
+    <input id="input5"> </input>
+    <button id="btn"></button>
+    <button id="btn2"></button>
+    <button id="btn3"></button>
+</body>
+<script>
+     
+                $('#btn').click(function() {
+                    axios.get('https://service-fh4clvvn-1309857907.sh.apigw.tencentcs.com/release/getdata',{
+                        params:{
+                            T:'60',
+                            dt:'0.9',
+                            Q1:'10',
+                            Q2:'23456',
+                            Q3:'34567',
+                            Q4:'45678',
+                            Q5:'56789'
+                            
+                        }
+                        })
+                        .then(function(response){
+                        console.log(response);
+                        })
+                        .catch(function(error){
+                        console.log(error);
+                        });
+                });
+                $('#btn2').click(function() {
+                    axios.get('https://service-fh4clvvn-1309857907.sh.apigw.tencentcs.com/release/getdata2',{
+                        params:{
+                            
+                        }
+                        })
+                        .then(function(response){
+                        console.log(response);
+                        })
+                        .catch(function(error){
+                        console.log(error);
+                        });
+                });
+                $('#btn3').click(function() {
+                    axios.get('https://service-fh4clvvn-1309857907.sh.apigw.tencentcs.com/release/getdata3',{
+                        params:{
+                            
+                        }
+                        })
+                        .then(function(response){
+                        console.log(response);
+                        })
+                        .catch(function(error){
+                        console.log(error);
+                        });
+                });
+            
+
+</script>
+</html>
